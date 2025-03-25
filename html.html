@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 Garage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="Stylesheet.css">
+</head>
+
+<body>
+    <div id="welcome-screen">
+        <img src="src/brand.png" alt="A2Garage Logo" class="w-50 p-2">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="src/brand.png" alt="A2Garage Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold">
+                    <li class="nav-item"><a class="nav-link top" href="#about">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link top" href="#services">Layanan Kami</a></li>
+                    <li class="nav-item"><a class="nav-link top" href="#gallery">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link top" href="#outlets">Cabang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link top" href="#reservation">Reservasi</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="src/background.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video tag.
+        </video>
+        <div class="header-content d-flex justify-content-center flex-column align-items-center">
+            <img src="src/brand.png" alt="A2Garage Logo" class="w-75 p-2">
+            <div class="divider py-1 bg-danger w-25 rounded"></div>
+            <p class="p-3">Spesialis Tuner Mesin & Custom Body Kit</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container-about my-5">
+            <div class="img-container text-center">
+                <img src="src/our-garage.jpg" alt="">
+            </div>
+            <div class="content-about text-center">
+                <img src="src/gear.gif" alt="Gear Animation" class="gear-animation">
+                <h2 class="p-3 fw-bold">About Us</h2>
+                <p>A2Garage is an automotive workshop specializing in body kits and car engine tune-ups. We provide a
+                    wide selection of world-class body kits as well as a wide range of car engines and their supporting
+                    components.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container my-3 text-center">
+            <h2 class="p-3 fw-bold">Layanan Kami</h2>
+            <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="src/dynotest.jpg" class="d-block w-100" alt="Tuning Mesin">
+                        <div class="carousel-caption">
+                            <h5 class="fw-bold">Tuning Mesin</h5>
+                            <p>Optimalkan performa mobil Anda.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="src/lbwk kit.jpg" class="d-block w-100" alt="Custom Body Kit">
+                        <div class="carousel-caption">
+                            <h5 class="fw-bold">Custom Body Kit</h5>
+                            <p>Desain eksklusif untuk tampilan unik.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container my-5 text-center">
+            <h2 class="p-3 fw-bold">Galeri</h2>
+            <div class="video-column">
+                <div class="video-content container mt-4">
+                    <div class="video-container container my-3">
+                        <video class="video" controls>
+                            <source src="src/videoplayback.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
+                    </div>
+                    <div class="video-caption">
+                        <h5>Hasil Tuning: Optimalkan Performa Kendaraan Anda</h5>
+                        <p>Di A2 Garage, kami mengkhususkan diri dalam tuning kendaraan untuk menghasilkan
+                            performa terbaik. Setiap kendaraan yang masuk ke garasi kami akan melalui proses tuning yang
+                            cermat, mulai dari pengaturan mesin, sistem pengapian, hingga penyesuaian pengaturan
+                            suspensi.</p>
+                    </div>
+                </div>
+                <div class="video-content container">
+                    <div class="video-container container my-3">
+                        <video controls>
+                            <source src="src/videoplayback (1).mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
+                    </div>
+                    <div class="video-caption">
+                        <h5>Body Kit: Desain Menawan, Performansi Maksimal</h5>
+                        <p>Modifikasi body kit adalah cara terbaik untuk memberikan sentuhan personal pada kendaraan
+                            Anda. Body kit yang kami tawarkan di A2 Garage tidak hanya mempercantik tampilan
+                            mobil Anda, tetapi juga meningkatkan aerodinamika dan stabilitas kendaraan. </p>
+                    </div>
+                </div>
+                <div class="video-content container">
+                    <div class="video-container container my-3">
+                        <video controls>
+                            <source src="src/currentproject.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung tag video.
+                        </video>
+                    </div>
+                    <div class="video-caption">
+                        <h5>Garapan Terbaru: Karya Terbaru Kami</h5>
+                        <p>Kami bangga dengan setiap proyek yang kami kerjakan, dan di bagian Latest Works, Anda dapat
+                            melihat berbagai hasil modifikasi terbaru yang telah kami selesaikan. Dari tuning mesin yang
+                            mengubah performa mobil hingga pemasangan body kit yang memberikan tampilan lebih menonjol,
+                            setiap karya kami mencerminkan dedikasi dan perhatian terhadap detail. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="outlets" class="text-center">
+        <div class="container my-5 text-center">
+            <h2 class="fw-bold">Lokasi Cabang</h2>
+            <div id="map" style="height: 500px; width: 100%;"></div>
+        </div>
+    </section>
+
+    <section id="reservation">
+        <div class="d-flex justify-content-center">
+            <div class="col-lg-6 pt-4">
+                <div class="card shadow-lg p-4">
+                    <h2 class="text-center text-uppercase fw-bold mb-4">Reservasi Servis</h2>
+                    <p class="text-center text-muted">Isi formulir untuk booking layanan di A2Garage.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Nama</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tanggal" class="form-label">Tanggal Reservasi</label>
+                            <input type="date" class="form-control" id="tanggal" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="layanan" class="form-label">Pilih Layanan</label>
+                            <select class="form-select" id="layanan">
+                                <option value="" disabled selected>Pilih layanan...</option>
+                                <option value="tuning">Tuning Mesin</option>
+                                <option value="custom">Custom Body Kit</option>
+                                <option value="perawatan">Perawatan Berkala</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-custom w-100">Kirim Reservasi</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted p-0">
+        <section id="footer-content" class="footer-content">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="desc col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>A2 Garage
+                        </h6>
+                        <p>
+                            A2Garage is an automotive workshop specializing in body kits and car engine tune-ups. We
+                            provide a wide selection of world-class body kits as well as a wide range of car engines
+                            and their supporting components.
+                        </p>
+                    </div>
+
+                    <div class="contact col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p>
+                            <i class="bi bi-envelope-at-fill me-3"></i>
+                            info@a2garage.com
+                        </p>
+                        <p>
+                            <i class="bi bi-telephone-fill me-3"></i>
+                            + 62 812 3456 7890
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <div class="copy-footer text-center p-4">
+            &copy; 2025 A2Garage. Semua Hak Dilindungi.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="map.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('#welcome-screen').addClass('hide');
+            }, 2000);
+
+            var sections = $('section');
+            var navLinks = $('nav div div ul li a');
+            var header = $('header');
+
+            $(window).on('scroll', function () {
+                var scrollPosition = $(window).scrollTop();
+                var headerHeight = header.outerHeight();
+
+                if (scrollPosition <= headerHeight) {
+                    navLinks.removeClass('active');
+                } else {
+                    sections.each(function () {
+                        var section = $(this);
+                        var offset = section.offset().top;
+                        var height = section.outerHeight();
+                        var sectionId = section.attr('id');
+
+                        if (scrollPosition >= offset - 50 && scrollPosition < offset + height - 50) {
+                            navLinks.removeClass('active');
+                            $('nav a[href="#' + sectionId + '"]').addClass('active');
+                        }
+                    });
+                }
+
+                if (scrollPosition > 0 || $(window).width() < 992) {
+                    $('.navbar').removeClass('transparent').addClass('solid');
+                    $('.nav-link').addClass('solid').removeClass('top');
+                } else {
+                    $('.navbar').removeClass('solid').addClass('transparent');
+                    $('.nav-link').removeClass('solid').addClass('top');
+                }
+            });
+
+            $(window).resize(function () {
+                if ($(window).width() < 992 || $(window).scrollTop() > 0) {
+                    $('.navbar').removeClass('transparent').addClass('solid');
+                } else {
+                    $('.navbar').removeClass('solid').addClass('transparent');
+                }
+            });
+
+            // $('.navbar').addClass('transparent');
+        });
+    </script>
+</body>
+
+</html>
