@@ -243,13 +243,32 @@
                 $('#welcome-screen').addClass('hide');
             }, 2000);
 
-            var sections = $('section');
-            var navLinks = $('nav div div ul li a');
-            var header = $('header');
+            function updateNavbar() {
+                if ($(window).width() < 992 || $(window).scrollTop() > 0) {
+                    $('.navbar').removeClass('transparent').addClass('solid');
+                    $('.nav-link').addClass('solid').removeClass('top');
+                } else {
+                    $('.navbar').removeClass('solid').addClass('transparent');
+                    $('.nav-link').removeClass('solid').addClass('top');
+                }
+            }
 
+            // Run the updateNavbar function when the page loads
+            updateNavbar();
+
+            // Run the updateNavbar function on window resize
+            $(window).resize(function () {
+                updateNavbar();
+            });
+
+            // Additional scroll functionality for navbar
             $(window).on('scroll', function () {
                 var scrollPosition = $(window).scrollTop();
-                var headerHeight = header.outerHeight();
+                var headerHeight = $('header').outerHeight();
+
+                // Handle navigation link highlighting
+                var sections = $('section');
+                var navLinks = $('nav div div ul li a');
 
                 if (scrollPosition <= headerHeight) {
                     navLinks.removeClass('active');
@@ -267,6 +286,7 @@
                     });
                 }
 
+                // Adjust navbar class when scrolling
                 if (scrollPosition > 0 || $(window).width() < 992) {
                     $('.navbar').removeClass('transparent').addClass('solid');
                     $('.nav-link').addClass('solid').removeClass('top');
@@ -275,16 +295,6 @@
                     $('.nav-link').removeClass('solid').addClass('top');
                 }
             });
-
-            $(window).resize(function () {
-                if ($(window).width() < 992 || $(window).scrollTop() > 0) {
-                    $('.navbar').removeClass('transparent').addClass('solid');
-                } else {
-                    $('.navbar').removeClass('solid').addClass('transparent');
-                }
-            });
-
-            // $('.navbar').addClass('transparent');
         });
     </script>
 </body>
