@@ -349,7 +349,6 @@ footer {
         /* Rasio 16:9 */
     }
 
-    /* Baru ditambah */
     .map-container iframe {
         position: absolute;
         top: 0;
@@ -375,11 +374,11 @@ footer {
     }
 
     .video-caption h5{
-        font-size: calc(24px/1.2);
+        font-size: calc(24px/1.4);
     }
 
     .content-about p, .video-caption p, .desc p, .contact p, .copy-footer{
-        font-size: calc(16px/1.4);
+        font-size: calc(16px/1.6);
     }
 
     #footer-content{
